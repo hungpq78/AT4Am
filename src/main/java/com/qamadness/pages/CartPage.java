@@ -50,8 +50,7 @@ public class CartPage extends PageObject {
     WebElement zip_field;
     public void zip_field_input() {zip_field.sendKeys("97218");}
 
-    @FindBy (xpath = ".//*[@id='enterAddressCountryCode']")
-    WebElement country_dropdown;
+
     public void select_country_from_dropdown() {
         Select dropdown = new Select(getDriver().findElement(org.openqa.selenium.By.id("enterAddressCountryCode")));
         dropdown.selectByValue("US");
