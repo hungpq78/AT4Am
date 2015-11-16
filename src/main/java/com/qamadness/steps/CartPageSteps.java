@@ -33,6 +33,9 @@ public class CartPageSteps extends ScenarioSteps {
     public void zip_field_input() {cartPage.zip_field_input();}
 
     @Step
+    public void choose_country () {cartPage.select_country_from_dropdown();}
+
+    @Step
     public void phone_number_input() {cartPage.phone_number_input();}
 
     @Step

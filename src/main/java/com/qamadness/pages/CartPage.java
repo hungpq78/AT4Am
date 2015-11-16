@@ -2,10 +2,12 @@ package com.qamadness.pages;
 
 
 import net.serenitybdd.core.pages.WebElementFacade;
+import net.thucydides.core.annotations.findby.By;
 import net.thucydides.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * Created by Vladislav.E on 11.11.2015.
@@ -50,6 +52,10 @@ public class CartPage extends PageObject {
 
     @FindBy (xpath = ".//*[@id='enterAddressCountryCode']")
     WebElement country_dropdown;
+    public void select_country_from_dropdown() {
+        Select dropdown = new Select(getDriver().findElement(org.openqa.selenium.By.id("enterAddressCountryCode")));
+        dropdown.selectByValue("US");
+    }
 
     @FindBy (xpath = ".//*[@id='enterAddressPhoneNumber']")
     WebElement phone_number_field;

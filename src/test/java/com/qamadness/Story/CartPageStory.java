@@ -82,6 +82,7 @@ public class CartPageStory {
         cartPageSteps.city_field_input();
         cartPageSteps.state_field_input();
         cartPageSteps.zip_field_input();
+        cartPageSteps.choose_country();
         cartPageSteps.phone_number_input();
         cartPageSteps.click_continue_btn();
         cartPageSteps.click_continue_btn_from_shipping_step();
