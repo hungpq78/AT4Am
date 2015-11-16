@@ -36,7 +36,7 @@ public class CartPageStory {
 
     @Issue("#Add product to Cart from search")
     @Test
-    @Pending
+   // @Pending
     public void add_product_to_cart() {
         homePageSteps.open_Amazon();
         homePageSteps.input_in_search_field();
@@ -48,7 +48,7 @@ public class CartPageStory {
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-        cartPageSteps.delete_old_address_if_it_present();
+       // cartPageSteps.delete_old_address_if_it_present();
         cartPageSteps.full_name_field_input();
         cartPageSteps.address_field_input();
         cartPageSteps.city_field_input();
@@ -78,7 +78,7 @@ public class CartPageStory {
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-        cartPageSteps.delete_old_address_if_it_present();
+       // cartPageSteps.delete_old_address_if_it_present();
         cartPageSteps.full_name_field_input();
         cartPageSteps.address_field_input();
         cartPageSteps.city_field_input();
