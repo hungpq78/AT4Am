@@ -22,6 +22,7 @@ public class CartPage extends PageObject {
            getDriver().navigate().back();
 
     }
+    /////////// Just commit////////////////////////////
 
     @FindBy (xpath = ".//*[@id='hlb-ptc-btn-native']")
     WebElement proceed_to_checkout_btn;
