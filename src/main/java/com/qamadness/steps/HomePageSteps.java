@@ -55,12 +55,15 @@ public class HomePageSteps extends ScenarioSteps {
     public void click_cell_phones_link() {homePage.click_cell_phones_link();}
 
     @Step
-    public void click_smartwatches_link() {homePage.click_smartwatches_link();}
+    public void click_phones_link() {homePage.click_phones_link();}
 
     @Step
     public void click_apple_checkbox() {homePage.click_apple_checkbox();}
 
     @Step
-    public void open_some_watch() {homePage.open_some_watch();}
+    public void open_some_phone() {homePage.open_some_phone();}
+
+    @Step
+    public void hover_shop_by_department_link() {homePage.hover_shop_by_department_link();}
 
 }

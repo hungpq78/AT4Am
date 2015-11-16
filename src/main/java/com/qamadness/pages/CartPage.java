@@ -6,6 +6,7 @@ import net.thucydides.core.annotations.findby.By;
 import net.thucydides.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -24,7 +25,6 @@ public class CartPage extends PageObject {
            getDriver().navigate().back();
 
     }
-    /////////// Just commit////////////////////////////
 
     @FindBy (xpath = ".//*[@id='hlb-ptc-btn-native']")
     WebElement proceed_to_checkout_btn;
@@ -36,24 +36,24 @@ public class CartPage extends PageObject {
 
     @FindBy (xpath = ".//*[@id='enterAddressAddressLine1']")
     WebElement address_line_field;
-    public void address_field_input() {address_line_field.sendKeys("5334 NE 49th Ave");}
+    public void address_field_input() {address_line_field.sendKeys("Schwalbengasse 14");}
 
     @FindBy (xpath = ".//*[@id='enterAddressCity']")
     WebElement city_field;
-    public void city_field_input() {city_field.sendKeys("Portland");}
+    public void city_field_input() {city_field.sendKeys("Köln");}
 
     @FindBy (xpath = ".//*[@id='enterAddressStateOrRegion']")
     WebElement state_field;
-    public void state_field_input() {state_field.sendKeys("Oregon");}
+    public void state_field_input() {state_field.sendKeys("Cologne");}
 
     @FindBy (xpath = ".//*[@id='enterAddressPostalCode']")
     WebElement zip_field;
-    public void zip_field_input() {zip_field.sendKeys("97218");}
+    public void zip_field_input() {zip_field.sendKeys("50667");}
 
 
     public void select_country_from_dropdown() {
         Select dropdown = new Select(getDriver().findElement(org.openqa.selenium.By.id("enterAddressCountryCode")));
-        dropdown.selectByValue("US");
+        dropdown.selectByValue("DE");
     }
 
     @FindBy (xpath = ".//*[@id='enterAddressPhoneNumber']")
@@ -68,13 +68,24 @@ public class CartPage extends PageObject {
     WebElement continue_btn_from_shipping;
     public void click_continue_btn_from_shipping_step() {continue_btn_from_shipping.click();}
 
-    @FindBy (linkText = "Delete")
-    WebElement delete_btn;
+   /* @FindBy (linkText = "Delete")
+    WebElement delete_btn;*/
     public void delete_old_address_if_it_present() {
-        if (delete_btn.getText().equals("Delete"))
-            delete_btn.click();
+        WebElement delete_1btn=getDriver().findElement(org.openqa.selenium.By.linkText("Delete"));
+        if (getDriver().findElement(org.openqa.selenium.By.linkText("Delete")).isDisplayed()){
+            delete_1btn.click();
+            System.out.println("Old address is Deleted");}
         else
             System.out.println("Address is absent");
+    }
+
+    @FindBy (xpath = ".//*[@id='changeQuantityFormId']/table[2]/tbody/tr/td/div/div")
+    WebElementFacade error_message;
+    public void check_error_message() {
+        if (error_message.getText().equals("Important Message"))
+            System.out.println("Error message is Present");
+        else
+            System.out.println("You can by this thing");
     }
 
 

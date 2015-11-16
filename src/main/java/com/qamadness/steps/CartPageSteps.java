@@ -49,4 +49,7 @@ public class CartPageSteps extends ScenarioSteps {
 
     @Step
     public void check_add_product_btn_and_click_it() {cartPage.check_add_product_btn_and_click_it();}
+
+    @Step
+    public void check_error_message() {cartPage.check_error_message();}
 }

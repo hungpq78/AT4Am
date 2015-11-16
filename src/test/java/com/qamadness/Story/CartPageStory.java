@@ -54,9 +54,12 @@ public class CartPageStory {
         cartPageSteps.city_field_input();
         cartPageSteps.state_field_input();
         cartPageSteps.zip_field_input();
+        cartPageSteps.choose_country();
         cartPageSteps.phone_number_input();
         cartPageSteps.click_continue_btn();
-        cartPageSteps.click_continue_btn_from_shipping_step();
+        cartPageSteps.check_error_message();
+        homePageSteps.getDriver().close();
+
 
     }
 
@@ -64,12 +67,11 @@ public class CartPageStory {
     @Test
     public void add_product_from_categories() {
         homePageSteps.open_Amazon();
-        homePageSteps.click_shop_by_department_link();
-        homePageSteps.click_full_store_directory_link();
+        homePageSteps.hover_shop_by_department_link();
         homePageSteps.click_cell_phones_link();
-        homePageSteps.click_smartwatches_link();
+        homePageSteps.click_phones_link();
         homePageSteps.click_apple_checkbox();
-        homePageSteps.open_some_watch();
+        homePageSteps.open_some_phone();
         cartPageSteps.click_add_to_cart_btn();
         //cartPageSteps.check_add_product_btn_and_click_it();
         cartPageSteps.click_proceed_to_checkout_btn();
@@ -85,7 +87,9 @@ public class CartPageStory {
         cartPageSteps.choose_country();
         cartPageSteps.phone_number_input();
         cartPageSteps.click_continue_btn();
-        cartPageSteps.click_continue_btn_from_shipping_step();
+        cartPageSteps.check_error_message();
+        homePageSteps.getDriver().close();
+
     }
 
 }

@@ -1,11 +1,14 @@
 package com.qamadness.pages;
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 /**
  * Created by Vladislav.E on 09.11.2015.
@@ -65,6 +68,17 @@ public class HomePage extends PageObject{
     WebElement shop_by_department_link;
     public void click_shop_by_department_link() {shop_by_department_link.click();}
 
+    public void hover_shop_by_department_link() {
+        WebElement categoryLink = getDriver().findElement(org.openqa.selenium.By.id("nav-link-shopall"));
+        Actions action = new Actions(getDriver());
+    action.moveToElement(categoryLink).perform();
+
+        WebElement subLink = getDriver().findElement(org.openqa.selenium.By.linkText("Full Store Directory"));
+        action.moveToElement(subLink);
+        action.click();
+        action.perform();
+    }
+
     @FindBy (xpath = ".//*[@id='nav-flyout-shopAll']/div[2]/a/span")
     WebElement full_store_directory_link;
     public void click_full_store_directory_link() {full_store_directory_link.click();}
@@ -73,17 +87,18 @@ public class HomePage extends PageObject{
     WebElement cell_phones_link;
     public void click_cell_phones_link() {cell_phones_link.click();}
 
-    @FindBy (linkText = "Smartwatches")
-    WebElement smartwatches_link;
-    public void click_smartwatches_link() {smartwatches_link.click();}
+    @FindBy (linkText = "Unlocked Cell Phones")
+    WebElement unlocked_Cell_Phones_link;
+    public void click_phones_link() {unlocked_Cell_Phones_link.click();}
 
-    @FindBy (xpath = ".//*[@id='ref_2528832011']/li[6]/a/img")
-    WebElement choose_only_apple_watches;
-    public void click_apple_checkbox() {choose_only_apple_watches.click();}
+    @FindBy (xpath = ".//*[@id='ref_6787345011']/li[3]/a/span[1]")
+    WebElement choose_only_iOS;
+    public void click_apple_checkbox() {choose_only_iOS.click();}
 
-    @FindBy (partialLinkText = "Apple Watch")
-    WebElement apple_watch_link;
-    public void open_some_watch() {apple_watch_link.click();}
+    @FindBy (partialLinkText = "Apple iPhone")
+    WebElement apple_phone_link;
+    public void open_some_phone() {apple_phone_link.click();}
+
 
 
 
