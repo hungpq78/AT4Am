@@ -69,7 +69,7 @@ public class HomePage extends PageObject{
     public void click_shop_by_department_link() {shop_by_department_link.click();}
 
     public void hover_shop_by_department_link() {
-        WebElement categoryLink = getDriver().findElement(org.openqa.selenium.By.id("nav-link-shopall"));
+        WebElement categoryLink = getDriver().findElement(By.partialLinkText("Department"));
         Actions action = new Actions(getDriver());
     action.moveToElement(categoryLink).perform();
 
@@ -79,7 +79,7 @@ public class HomePage extends PageObject{
         action.perform();
     }
 
-    @FindBy (xpath = ".//*[@id='nav-flyout-shopAll']/div[2]/a/span")
+    @FindBy (linkText = "Full Store Directory")
     WebElement full_store_directory_link;
     public void click_full_store_directory_link() {full_store_directory_link.click();}
 

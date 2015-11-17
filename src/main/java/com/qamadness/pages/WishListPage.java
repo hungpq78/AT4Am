@@ -16,7 +16,7 @@ public class WishListPage extends PageObject {
     WebElementFacade add_to_cart_from_wish_list_btn;
     public void click_add_from_list_to_cart_btn() {add_to_cart_from_wish_list_btn.click();}
 
-    @FindBy (linkText = "Delete item")
+    @FindBy (partialLinkText= "Delete")
     WebElementFacade delete_item_from_list_btn;
     public void click_delete_item_from_list_btn() {delete_item_from_list_btn.click();}
 

@@ -52,4 +52,5 @@ public class CartPageSteps extends ScenarioSteps {
 
     @Step
     public void check_error_message() {cartPage.check_error_message();}
+
 }

@@ -3,6 +3,7 @@ package com.qamadness.Story;
 import com.qamadness.steps.CartPageSteps;
 import com.qamadness.steps.HomePageSteps;
 import com.qamadness.steps.LoginPageSteps;
+import com.qamadness.steps.ProfilePageSteps;
 import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Pending;
@@ -34,6 +35,9 @@ public class CartPageStory {
     @Steps
     CartPageSteps cartPageSteps;
 
+    @Steps
+    ProfilePageSteps profilePageSteps;
+
     @Issue("#Add product to Cart from search")
     @Test
    // @Pending
@@ -48,7 +52,7 @@ public class CartPageStory {
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-       // cartPageSteps.delete_old_address_if_it_present();
+        //cartPageSteps.delete_old_address_if_it_present();
         cartPageSteps.full_name_field_input();
         cartPageSteps.address_field_input();
         cartPageSteps.city_field_input();
@@ -58,6 +62,13 @@ public class CartPageStory {
         cartPageSteps.phone_number_input();
         cartPageSteps.click_continue_btn();
         cartPageSteps.check_error_message();
+        homePageSteps.open_Amazon();
+        homePageSteps.click_myAcc_link();
+        homePageSteps.click_manage_adress();
+        homePageSteps.click_manage_adrress_book();
+        profilePageSteps.delete_address();
+        profilePageSteps.click_confirm_btn();
+        profilePageSteps.check_that_address_was_deleted();
         homePageSteps.getDriver().close();
 
 
@@ -78,7 +89,7 @@ public class CartPageStory {
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-       // cartPageSteps.delete_old_address_if_it_present();
+        //cartPageSteps.delete_old_address_if_it_present();
         cartPageSteps.full_name_field_input();
         cartPageSteps.address_field_input();
         cartPageSteps.city_field_input();
@@ -88,6 +99,13 @@ public class CartPageStory {
         cartPageSteps.phone_number_input();
         cartPageSteps.click_continue_btn();
         cartPageSteps.check_error_message();
+        homePageSteps.open_Amazon();
+        homePageSteps.click_myAcc_link();
+        homePageSteps.click_manage_adress();
+        homePageSteps.click_manage_adrress_book();
+        profilePageSteps.delete_address();
+        profilePageSteps.click_confirm_btn();
+        profilePageSteps.check_that_address_was_deleted();
         homePageSteps.getDriver().close();
 
     }

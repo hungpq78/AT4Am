@@ -9,6 +9,9 @@ import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebDriver;
+
+import javax.validation.constraints.AssertTrue;
 
 /**
  * Created by Vladislav.E on 11.11.2015.
@@ -71,9 +74,9 @@ public class CartPage extends PageObject {
    /* @FindBy (linkText = "Delete")
     WebElement delete_btn;*/
     public void delete_old_address_if_it_present() {
-        WebElement delete_1btn=getDriver().findElement(org.openqa.selenium.By.linkText("Delete"));
-        if (getDriver().findElement(org.openqa.selenium.By.linkText("Delete")).isDisplayed()){
-            delete_1btn.click();
+        WebElement delete_btn=getDriver().findElement(org.openqa.selenium.By.linkText("Delete"));
+        if (getDriver().findElement(org.openqa.selenium.By.linkText("Delete")).isDisplayed()==true){
+            delete_btn.click();
             System.out.println("Old address is Deleted");}
         else
             System.out.println("Address is absent");
@@ -82,10 +85,10 @@ public class CartPage extends PageObject {
     @FindBy (xpath = ".//*[@id='changeQuantityFormId']/table[2]/tbody/tr/td/div/div")
     WebElementFacade error_message;
     public void check_error_message() {
-        if (error_message.getText().equals("Important Message"))
-            System.out.println("Error message is Present");
+        if (error_message.getText().startsWith("Important Message"))
+            System.out.println("Error message is present");
         else
-            System.out.println("You can by this thing");
+            System.out.println("You can buy this thing");
     }
 
 
