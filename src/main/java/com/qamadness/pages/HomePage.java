@@ -36,7 +36,7 @@ public class HomePage extends PageObject{
     WebElementFacade myAcc_Link;
     public void click_myAcc_link() {myAcc_Link.click();}
 
-    @FindBy (xpath = ".//*[@id='nav-flyout-yourAccount']/div[2]/a[1]/span")
+    @FindBy (xpath = "html/body/div[1]/div[2]/div[2]/div/div[1]/div[3]/div/div/div[2]/div/div[2]/ul/li[1]/a")
     WebElementFacade manage_profile;
     public void click_manage_adress() {manage_profile.click();}
 
@@ -50,7 +50,7 @@ public class HomePage extends PageObject{
 
     @FindBy (xpath = ".//*[@id='twotabsearchtextbox']")
     WebElementFacade serch_field;
-    public void input_in_search() {serch_field.sendKeys("Microsoft Band 2");}
+    public void input_in_search() {serch_field.sendKeys("microsoft band 2");}
 
     @FindBy (xpath = ".//*[@id='nav-search']/form/div[2]/div/input")
     WebElementFacade serch_btn;
@@ -60,7 +60,7 @@ public class HomePage extends PageObject{
     WebElementFacade cart_btn;
     public void click_cart_btn() {cart_btn.click();}
 
-    @FindBy (partialLinkText = "Microsoft Band 2")
+    @FindBy (partialLinkText = "microsoft band 2")
     WebElementFacade product_link;
     public void open_some_product() {product_link.click();}
 

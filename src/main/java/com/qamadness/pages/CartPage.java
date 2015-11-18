@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebDriver;
 
 import javax.validation.constraints.AssertTrue;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Vladislav.E on 11.11.2015.
@@ -22,12 +23,28 @@ public class CartPage extends PageObject {
     WebElementFacade add_to_cart_btn;
     public void click_add_to_cart_btn() {add_to_cart_btn.click();}
     public void check_add_product_btn_and_click_it() {
+
         if (add_to_cart_btn.isDisplayed())
             add_to_cart_btn.click();
         else
-           getDriver().navigate().back();
-
+            getDriver().navigate().back();
     }
+
+    public void add_btn(){
+        setImplicitTimeout(20, TimeUnit.SECONDS);
+        int add_btn = getDriver().findElements(org.openqa.selenium.By.xpath(".//*[@id='result_0']/div/div/div/div[2]/div[1]/a/h2")).size();
+        for (int i=0; i<=add_btn; i++){
+            waitForRenderedElementsToBePresent(org.openqa.selenium.By.xpath(".//*[@id='result_"+i+"']/div/div/div/div[2]/div[1]/a/h2")).withTimeoutOf(20, TimeUnit.SECONDS);
+            getDriver().findElement(org.openqa.selenium.By.xpath(".//*[@id='result_"+i+"']/div/div/div/div[2]/div[1]/a/h2")).click();
+            if(getDriver().findElements(org.openqa.selenium.By.xpath(".//*[@id='add-to-cart-button']")).size()>0){
+                add_to_cart_btn.click();
+                break;
+            }else{
+                getDriver().navigate().back();
+            }
+        }
+    }
+
 
     @FindBy (xpath = ".//*[@id='hlb-ptc-btn-native']")
     WebElement proceed_to_checkout_btn;
@@ -90,7 +107,5 @@ public class CartPage extends PageObject {
         else
             System.out.println("You can buy this thing");
     }
-
-
 
 }
