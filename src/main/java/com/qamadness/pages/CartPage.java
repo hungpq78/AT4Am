@@ -2,16 +2,10 @@ package com.qamadness.pages;
 
 
 import net.serenitybdd.core.pages.WebElementFacade;
-import net.thucydides.core.annotations.findby.By;
 import net.thucydides.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
-
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.WebDriver;
-
-import javax.validation.constraints.AssertTrue;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -44,7 +38,6 @@ public class CartPage extends PageObject {
             }
         }
     }
-
 
     @FindBy (xpath = ".//*[@id='hlb-ptc-btn-native']")
     WebElement proceed_to_checkout_btn;

@@ -47,7 +47,7 @@ public class AddressBookStory {
         //homePageSteps.check_that_user_is_logged_in();
         homePageSteps.click_myAcc_link();
         homePageSteps.click_manage_adress();
-        homePageSteps.click_manage_adrress_book();
+       // homePageSteps.click_manage_adrress_book();
         homePageSteps.Click_add_new_address_btn();
         profilePageSteps.input_name();
         profilePageSteps.input_address();
@@ -75,7 +75,7 @@ public class AddressBookStory {
         loginPageSteps.click_sign_in_btn();
         homePageSteps.click_myAcc_link();
         homePageSteps.click_manage_adress();
-        homePageSteps.click_manage_adrress_book();
+        //homePageSteps.click_manage_adrress_book();
         profilePageSteps.delete_address();
         profilePageSteps.click_confirm_btn();
         profilePageSteps.check_that_address_was_deleted();
@@ -94,7 +94,7 @@ public class AddressBookStory {
         loginPageSteps.click_sign_in_btn();
         homePageSteps.click_myAcc_link();
         homePageSteps.click_manage_adress();
-        homePageSteps.click_manage_adrress_book();
+        //homePageSteps.click_manage_adrress_book();
         homePageSteps.Click_add_new_address_btn();
         profilePageSteps.input_name();
         profilePageSteps.input_address();

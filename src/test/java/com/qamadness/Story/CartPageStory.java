@@ -45,9 +45,7 @@ public class CartPageStory {
         homePageSteps.open_Amazon();
         homePageSteps.input_in_search_field();
         homePageSteps.click_search_btn();
-        //homePageSteps.open_product();
-        //cartPageSteps.click_add_to_cart_btn();
-        //cartPageSteps.check_add_product_btn_and_click_it();
+        //homePageSteps.open_some_phone();
         cartPageSteps.test_check_ad_btn();
         cartPageSteps.click_proceed_to_checkout_btn();
         loginPageSteps.input_email();
@@ -66,7 +64,7 @@ public class CartPageStory {
         homePageSteps.open_Amazon();
         homePageSteps.click_myAcc_link();
         homePageSteps.click_manage_adress();
-        homePageSteps.click_manage_adrress_book();
+        //homePageSteps.click_manage_adrress_book();
         profilePageSteps.delete_address();
         profilePageSteps.click_confirm_btn();
         profilePageSteps.check_that_address_was_deleted();
@@ -77,14 +75,14 @@ public class CartPageStory {
 
     @Issue("Add product from categories")
     @Test
-    @Pending
+    //@Pending
     public void add_product_from_categories() {
         homePageSteps.open_Amazon();
         homePageSteps.hover_shop_by_department_link();
         homePageSteps.click_cell_phones_link();
         homePageSteps.click_phones_link();
         homePageSteps.click_apple_checkbox();
-        homePageSteps.open_some_phone();
+        //homePageSteps.open_some_phone();
         cartPageSteps.test_check_ad_btn();
         //cartPageSteps.click_add_to_cart_btn();
         //cartPageSteps.check_add_product_btn_and_click_it();
@@ -105,7 +103,7 @@ public class CartPageStory {
         homePageSteps.open_Amazon();
         homePageSteps.click_myAcc_link();
         homePageSteps.click_manage_adress();
-        homePageSteps.click_manage_adrress_book();
+        //homePageSteps.click_manage_adrress_book();
         profilePageSteps.delete_address();
         profilePageSteps.click_confirm_btn();
         profilePageSteps.check_that_address_was_deleted();

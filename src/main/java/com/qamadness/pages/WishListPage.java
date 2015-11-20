@@ -72,7 +72,7 @@ public class WishListPage extends PageObject {
     WebElementFacade wish_list_link;
     public void click_wish_list_link() {wish_list_link.click();}
 
-    @FindBy (xpath = ".//*[@id='nav-flyout-wl-items']/div/a/span[1]")
+    @FindBy (xpath = ".//*[@id='wishlist-page']/ul/div/a[2]")
     WebElementFacade link_to_list_with_product;
     public void click_link_to_list_with_product() {link_to_list_with_product.click();}
 

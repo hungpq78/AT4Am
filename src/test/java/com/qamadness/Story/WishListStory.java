@@ -1,5 +1,6 @@
 package com.qamadness.Story;
 
+import com.qamadness.steps.CartPageSteps;
 import com.qamadness.steps.HomePageSteps;
 import com.qamadness.steps.LoginPageSteps;
 import com.qamadness.steps.WishListPageSteps;
@@ -32,12 +33,16 @@ public class WishListStory {
     @Steps
     WishListPageSteps wishListPageSteps;
 
+    @Steps
+    CartPageSteps cartPageSteps;
+
     @Issue("#Add product to WishList")
     @Test
     public void add_product_to_wishlist() {
         homePageSteps.open_Amazon();
         homePageSteps.input_in_search_field();
         homePageSteps.click_search_btn();
+        //cartPageSteps.test_check_ad_btn();
         homePageSteps.open_product();
         wishListPageSteps.click_add_to_list_btn();
         loginPageSteps.input_email();
@@ -50,7 +55,7 @@ public class WishListStory {
         wishListPageSteps.click_delete_from_cart_link();
         wishListPageSteps.check_that_product_was_deleted();
         wishListPageSteps.click_wish_list_btn();
-        wishListPageSteps.click_list_with_product_link();
+        //wishListPageSteps.click_list_with_product_link();
         wishListPageSteps.click_delete_item_from_list_btn();
         wishListPageSteps.click_list_settings_btn();
         wishListPageSteps.click_check_box_delete();

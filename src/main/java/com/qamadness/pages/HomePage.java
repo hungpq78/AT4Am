@@ -40,7 +40,7 @@ public class HomePage extends PageObject{
     WebElementFacade manage_profile;
     public void click_manage_adress() {manage_profile.click();}
 
-    @FindBy (xpath = ".//*[@id='fixed_width']/div[2]/div/div[1]/div[3]/div/div/div[2]/div/div[2]/ul/li[1]/a")
+    @FindBy (xpath = ".//*[@id='fixed_width']/")
     WebElementFacade manage_adrress_book;
     public void click_manage_adrress_book() {manage_adrress_book.click();}
 
@@ -60,7 +60,7 @@ public class HomePage extends PageObject{
     WebElementFacade cart_btn;
     public void click_cart_btn() {cart_btn.click();}
 
-    @FindBy (partialLinkText = "microsoft band 2")
+    @FindBy (partialLinkText = "Microsoft Band 2")
     WebElementFacade product_link;
     public void open_some_product() {product_link.click();}
 
@@ -69,11 +69,11 @@ public class HomePage extends PageObject{
     public void click_shop_by_department_link() {shop_by_department_link.click();}
 
     public void hover_shop_by_department_link() {
-        WebElement categoryLink = getDriver().findElement(By.partialLinkText("Department"));
+        WebElement categoryLink = getDriver().findElement(By.xpath(".//*[@id='nav-link-shopall']"));
         Actions action = new Actions(getDriver());
     action.moveToElement(categoryLink).perform();
 
-        WebElement subLink = getDriver().findElement(org.openqa.selenium.By.linkText("Full Store Directory"));
+        WebElement subLink = getDriver().findElement(By.xpath(".//*[@id='nav-flyout-shopAll']/div[2]/a/span"));
         action.moveToElement(subLink);
         action.click();
         action.perform();
@@ -91,13 +91,13 @@ public class HomePage extends PageObject{
     WebElement unlocked_Cell_Phones_link;
     public void click_phones_link() {unlocked_Cell_Phones_link.click();}
 
-    @FindBy (xpath = ".//*[@id='ref_6787345011']/li[3]/a/span[1]")
-    WebElement choose_only_iOS;
-    public void click_apple_checkbox() {choose_only_iOS.click();}
+    @FindBy (xpath = ".//*[@id='ref_2528832011']/li[4]/a/span[1]")
+    WebElement choose_only_Nokia;
+    public void click_apple_checkbox() {choose_only_Nokia.click();}
 
-    @FindBy (partialLinkText = "Apple iPhone")
-    WebElement apple_phone_link;
-    public void open_some_phone() {apple_phone_link.click();}
+    @FindBy (partialLinkText = "Nokia Lumia")
+    WebElement nokia_phone_link;
+    public void open_some_phone() {nokia_phone_link.click();}
 
 
 
