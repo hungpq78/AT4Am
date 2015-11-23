@@ -56,4 +56,7 @@ public class CartPageSteps extends ScenarioSteps {
     @Step
     public void test_check_ad_btn() {cartPage.add_btn();}
 
+    @Step
+    public void test_check_prod() {cartPage.add_btn2();}
+
 }

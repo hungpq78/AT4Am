@@ -40,18 +40,17 @@ public class CartPageStory {
 
     @Issue("#Add product to Cart from search")
     @Test
-   // @Pending
+    //@Pending
     public void add_product_to_cart() {
         homePageSteps.open_Amazon();
         homePageSteps.input_in_search_field();
         homePageSteps.click_search_btn();
-        //homePageSteps.open_some_phone();
+
         cartPageSteps.test_check_ad_btn();
         cartPageSteps.click_proceed_to_checkout_btn();
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-        //cartPageSteps.delete_old_address_if_it_present();
         cartPageSteps.full_name_field_input();
         cartPageSteps.address_field_input();
         cartPageSteps.city_field_input();
@@ -64,7 +63,6 @@ public class CartPageStory {
         homePageSteps.open_Amazon();
         homePageSteps.click_myAcc_link();
         homePageSteps.click_manage_adress();
-        //homePageSteps.click_manage_adrress_book();
         profilePageSteps.delete_address();
         profilePageSteps.click_confirm_btn();
         profilePageSteps.check_that_address_was_deleted();
@@ -82,15 +80,11 @@ public class CartPageStory {
         homePageSteps.click_cell_phones_link();
         homePageSteps.click_phones_link();
         homePageSteps.click_apple_checkbox();
-        //homePageSteps.open_some_phone();
-        cartPageSteps.test_check_ad_btn();
-        //cartPageSteps.click_add_to_cart_btn();
-        //cartPageSteps.check_add_product_btn_and_click_it();
+        cartPageSteps.test_check_prod();
         cartPageSteps.click_proceed_to_checkout_btn();
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-        //cartPageSteps.delete_old_address_if_it_present();
         cartPageSteps.full_name_field_input();
         cartPageSteps.address_field_input();
         cartPageSteps.city_field_input();
@@ -103,7 +97,6 @@ public class CartPageStory {
         homePageSteps.open_Amazon();
         homePageSteps.click_myAcc_link();
         homePageSteps.click_manage_adress();
-        //homePageSteps.click_manage_adrress_book();
         profilePageSteps.delete_address();
         profilePageSteps.click_confirm_btn();
         profilePageSteps.check_that_address_was_deleted();

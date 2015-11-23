@@ -2,6 +2,7 @@ package com.qamadness.pages;
 
 
 import net.serenitybdd.core.pages.WebElementFacade;
+import net.thucydides.core.annotations.findby.By;
 import net.thucydides.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
@@ -26,10 +27,10 @@ public class CartPage extends PageObject {
 
     public void add_btn(){
         setImplicitTimeout(20, TimeUnit.SECONDS);
-        int add_btn = getDriver().findElements(org.openqa.selenium.By.xpath(".//*[@id='result_0']/div/div/div/div[2]/div[1]/a/h2")).size();
+        int add_btn = getDriver().findElements(By.partialLinkText("Microsoft Band")).size();
         for (int i=0; i<=add_btn; i++){
-            waitForRenderedElementsToBePresent(org.openqa.selenium.By.xpath(".//*[@id='result_"+i+"']/div/div/div/div[2]/div[1]/a/h2")).withTimeoutOf(20, TimeUnit.SECONDS);
-            getDriver().findElement(org.openqa.selenium.By.xpath(".//*[@id='result_"+i+"']/div/div/div/div[2]/div[1]/a/h2")).click();
+            waitForRenderedElementsToBePresent(By.partialLinkText("Microsoft Band")).withTimeoutOf(20, TimeUnit.SECONDS);
+            getDriver().findElement(By.partialLinkText("Microsoft Band")).click();
             if(getDriver().findElements(org.openqa.selenium.By.xpath(".//*[@id='add-to-cart-button']")).size()>0){
                 add_to_cart_btn.click();
                 break;
@@ -99,6 +100,21 @@ public class CartPage extends PageObject {
             System.out.println("Error message is present");
         else
             System.out.println("You can buy this thing");
+    }
+
+    public void add_btn2(){
+        setImplicitTimeout(20, TimeUnit.SECONDS);
+        int add_btn = getDriver().findElements(By.partialLinkText("Nokia Lumia")).size();
+        for (int i=0; i<=add_btn; i++){
+            waitForRenderedElementsToBePresent(org.openqa.selenium.By.partialLinkText("Nokia Lumia")).withTimeoutOf(20, TimeUnit.SECONDS);
+            getDriver().findElement(org.openqa.selenium.By.partialLinkText("Nokia Lumia")).click();
+            if(getDriver().findElements(org.openqa.selenium.By.xpath(".//*[@id='add-to-cart-button']")).size()>0){
+                add_to_cart_btn.click();
+                break;
+            }else{
+                getDriver().navigate().back();
+            }
+        }
     }
 
 }
