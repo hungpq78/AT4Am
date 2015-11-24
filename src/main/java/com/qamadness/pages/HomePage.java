@@ -36,7 +36,7 @@ public class HomePage extends PageObject{
     WebElementFacade myAcc_Link;
     public void click_myAcc_link() {myAcc_Link.click();}
 
-    @FindBy (xpath = "html/body/div[1]/div[2]/div[2]/div/div[1]/div[3]/div/div/div[2]/div/div[2]/ul/li[1]/a")
+    @FindBy (partialLinkText = "Manage Address Book")
     WebElementFacade manage_profile;
     public void click_manage_adress() {manage_profile.click();}
 
