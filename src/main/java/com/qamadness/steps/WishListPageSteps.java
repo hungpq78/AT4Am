@@ -45,8 +45,7 @@ public class WishListPageSteps extends ScenarioSteps {
     @Step
     public void click_delete_from_cart_link() {wishListPage.click_delete_from_cart_link();}
 
-    @Step
-    public void click_list_with_product_link() {wishListPage.click_link_to_list_with_product();}
+
 
     @Step
     public void click_wish_list_btn() {wishListPage.click_wish_list_link();}

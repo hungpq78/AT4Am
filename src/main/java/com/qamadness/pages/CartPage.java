@@ -78,20 +78,9 @@ public class CartPage extends PageObject {
     WebElement continue_btn;
     public void click_continue_btn() {continue_btn.click();}
 
-    @FindBy (xpath = ".//*[@id='shippingOptionFormId']/div[3]/div/div/span[1]/span/input")
-    WebElement continue_btn_from_shipping;
-    public void click_continue_btn_from_shipping_step() {continue_btn_from_shipping.click();}
 
-   /* @FindBy (linkText = "Delete")
-    WebElement delete_btn;*/
-    public void delete_old_address_if_it_present() {
-        WebElement delete_btn=getDriver().findElement(org.openqa.selenium.By.linkText("Delete"));
-        if (getDriver().findElement(org.openqa.selenium.By.linkText("Delete")).isDisplayed()==true){
-            delete_btn.click();
-            System.out.println("Old address is Deleted");}
-        else
-            System.out.println("Address is absent");
-    }
+
+
 
     @FindBy (xpath = ".//*[@id='changeQuantityFormId']/table[2]/tbody/tr/td/div/div")
     WebElementFacade error_message;

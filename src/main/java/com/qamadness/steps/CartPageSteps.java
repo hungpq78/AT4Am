@@ -11,8 +11,6 @@ public class CartPageSteps extends ScenarioSteps {
 
     CartPage cartPage;
 
-    @Step
-    public void click_add_to_cart_btn() {cartPage.click_add_to_cart_btn();}
 
     @Step
     public void click_proceed_to_checkout_btn() {cartPage.click_proceed_to_checkout_btn();}
@@ -41,14 +39,6 @@ public class CartPageSteps extends ScenarioSteps {
     @Step
     public void click_continue_btn() {cartPage.click_continue_btn();}
 
-    @Step
-    public void click_continue_btn_from_shipping_step() {cartPage.click_continue_btn_from_shipping_step();}
-
-    @Step
-    public void delete_old_address_if_it_present() {cartPage.delete_old_address_if_it_present();}
-
-    @Step
-    public void check_add_product_btn_and_click_it() {cartPage.check_add_product_btn_and_click_it();}
 
     @Step
     public void check_error_message() {cartPage.check_error_message();}

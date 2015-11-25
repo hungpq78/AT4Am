@@ -42,20 +42,20 @@ public class WishListStory {
         homePageSteps.open_Amazon();
         homePageSteps.input_in_search_field();
         homePageSteps.click_search_btn();
-        //cartPageSteps.test_check_ad_btn();
+
         homePageSteps.open_product();
         wishListPageSteps.click_add_to_list_btn();
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-        wishListPageSteps.click_create_list_from_adding_product();
-        wishListPageSteps.click_view_wish_list_btn();
+       // wishListPageSteps.click_create_list_from_adding_product();
+       // wishListPageSteps.click_view_wish_list_btn();
         wishListPageSteps.click_add_to_cart_from_wish_list_btn();
         homePageSteps.click_cart_btn();
         wishListPageSteps.click_delete_from_cart_link();
         wishListPageSteps.check_that_product_was_deleted();
         wishListPageSteps.click_wish_list_btn();
-        //wishListPageSteps.click_list_with_product_link();
+
         wishListPageSteps.click_delete_item_from_list_btn();
         wishListPageSteps.click_list_settings_btn();
         wishListPageSteps.click_check_box_delete();

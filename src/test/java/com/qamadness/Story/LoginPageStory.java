@@ -54,7 +54,6 @@ public class LoginPageStory {
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-        //homePageSteps.check_that_user_is_logged_in();
         homePageSteps.getDriver().close();
     }
 

@@ -40,9 +40,7 @@ public class HomePage extends PageObject{
     WebElementFacade manage_profile;
     public void click_manage_adress() {manage_profile.click();}
 
-    @FindBy (xpath = ".//*[@id='fixed_width']/")
-    WebElementFacade manage_adrress_book;
-    public void click_manage_adrress_book() {manage_adrress_book.click();}
+
 
     @FindBy (xpath = ".//*[@id='iux-address-book']/div[1]/div[1]/a/span")
     WebElementFacade click_add_new_address;
@@ -64,9 +62,7 @@ public class HomePage extends PageObject{
     WebElementFacade product_link;
     public void open_some_product() {product_link.click();}
 
-    @FindBy (xpath = ".//*[@id='nav-link-shopall']/span[2]")
-    WebElement shop_by_department_link;
-    public void click_shop_by_department_link() {shop_by_department_link.click();}
+
 
     public void hover_shop_by_department_link() {
         WebElement categoryLink = getDriver().findElement(By.xpath(".//*[@id='nav-link-shopall']"));
@@ -79,9 +75,7 @@ public class HomePage extends PageObject{
         action.perform();
     }
 
-    @FindBy (linkText = "Full Store Directory")
-    WebElement full_store_directory_link;
-    public void click_full_store_directory_link() {full_store_directory_link.click();}
+
 
     @FindBy (xpath = ".//*[@id='shopAllLinks']/tbody/tr/td[2]/div[5]/ul/li[4]/a")
     WebElement cell_phones_link;
@@ -95,9 +89,7 @@ public class HomePage extends PageObject{
     WebElement choose_only_Nokia;
     public void click_apple_checkbox() {choose_only_Nokia.click();}
 
-    @FindBy (partialLinkText = "Nokia Lumia")
-    WebElement nokia_phone_link;
-    public void open_some_phone() {nokia_phone_link.click();}
+
 
 
 

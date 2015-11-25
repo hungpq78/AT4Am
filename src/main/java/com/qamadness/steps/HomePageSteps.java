@@ -18,8 +18,7 @@ public class HomePageSteps extends ScenarioSteps {
     @Step
     public void open_login_page() {homePage.click_your_Amazon_Link();}
 
-    @Step
-    public void check_that_user_is_logged_in() {homePage.check_that_user_is_logged_in();}
+
 
     @Step
     public void click_manage_adress() {homePage.click_manage_adress();}
@@ -27,8 +26,7 @@ public class HomePageSteps extends ScenarioSteps {
     @Step
     public void click_myAcc_link() {homePage.click_myAcc_link();}
 
-    @Step
-    public void click_manage_adrress_book() {homePage.click_manage_adrress_book();}
+
 
     @Step
     public void Click_add_new_address_btn() {homePage.Click_add_new_address_btn();}
@@ -45,11 +43,7 @@ public class HomePageSteps extends ScenarioSteps {
     @Step
     public void click_cart_btn() {homePage.click_cart_btn();}
 
-    @Step
-    public void click_shop_by_department_link() {homePage.click_shop_by_department_link();}
 
-    @Step
-    public void click_full_store_directory_link() {homePage.click_full_store_directory_link();}
 
     @Step
     public void click_cell_phones_link() {homePage.click_cell_phones_link();}
@@ -60,8 +54,7 @@ public class HomePageSteps extends ScenarioSteps {
     @Step
     public void click_apple_checkbox() {homePage.click_apple_checkbox();}
 
-    @Step
-    public void open_some_phone() {homePage.open_some_phone();}
+
 
     @Step
     public void hover_shop_by_department_link() {homePage.hover_shop_by_department_link();}
