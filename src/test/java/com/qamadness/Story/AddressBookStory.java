@@ -6,6 +6,7 @@ import com.qamadness.steps.LoginPageSteps;
 import com.qamadness.steps.ProfilePageSteps;
 import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.junit.runners.ThucydidesRunner;
 import org.junit.FixMethodOrder;
@@ -85,6 +86,7 @@ public class AddressBookStory {
 
     @Issue("#Edit Address")
     @Test
+    @Pending
     public void Edit_Address() {
 
         homePageSteps.open_Amazon();
@@ -95,7 +97,7 @@ public class AddressBookStory {
         homePageSteps.click_myAcc_link();
         homePageSteps.click_manage_adress();
 
-        homePageSteps.Click_add_new_address_btn();
+       /* homePageSteps.Click_add_new_address_btn();
         profilePageSteps.input_name();
         profilePageSteps.input_address();
         profilePageSteps.input_city();
@@ -105,7 +107,7 @@ public class AddressBookStory {
         profilePageSteps.input_phone();
         profilePageSteps.choose_delivery();
         profilePageSteps.input_access_code();
-        profilePageSteps.click_save_btn();
+        profilePageSteps.click_save_btn();*/
         profilePageSteps.click_edit_btn();
         profilePageSteps.change_name();
         profilePageSteps.change_address();

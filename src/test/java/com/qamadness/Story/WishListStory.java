@@ -48,8 +48,8 @@ public class WishListStory {
         loginPageSteps.input_email();
         loginPageSteps.input_password();
         loginPageSteps.click_sign_in_btn();
-       // wishListPageSteps.click_create_list_from_adding_product();
-       // wishListPageSteps.click_view_wish_list_btn();
+        //wishListPageSteps.click_create_list_from_adding_product();
+        wishListPageSteps.click_view_wish_list_btn();
         wishListPageSteps.click_add_to_cart_from_wish_list_btn();
         homePageSteps.click_cart_btn();
         wishListPageSteps.click_delete_from_cart_link();
